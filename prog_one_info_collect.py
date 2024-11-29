@@ -7,17 +7,19 @@ def collect_info():
         # Ask for the informations
         full_name = input("Full name: ").strip()
 
+        # Set a condition that only numbers can be inputted
         while True:
             try:
                 user_age = int(input("Age: "))
                 break
-        
+            
             except ValueError:
                 print("Invalid input. Please try again.")
 
         loc_address = input("Address: ").strip()
         personal_email = input("Email: ").strip()
 
+        # Set a condition that 11-digit numbers can only be inputted
         while True:
             try:
                 phone_number = input("Phone Number: ")
@@ -43,6 +45,7 @@ def collect_info():
         while True:
             another_info = input("\nDo you want to input another person's information? (Yes/No): ").strip().lower()
 
+            # Set a condition for Yes/No answer
             if another_info == "yes":
                 continue
             elif another_info == "no":
