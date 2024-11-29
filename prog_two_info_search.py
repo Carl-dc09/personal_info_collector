@@ -13,17 +13,19 @@ def open_info():
     while True:
         search_name = input("Enter the full name: ").strip()
 
-        if search_name in data_info:
-            print("Information Found!")
+        recorded_infos = data_info.split("-" * 40)
 
-            records = data_info.split("-" * 40)
+        found_info = False
 
-            for record in records:
-                if f"Full Name: {search_name}" in record: 
-                    print(record.strip())
-                    break
-        else:
-            print("No records found.")
+        for record_info in recorded_infos:
+            if f"Full Name:".lower() in record_info.lower() and search_name in record_info.lower(): 
+                print("\n ---Information Found! ---")
+                print(record_info.strip())
+                found_info = True
+                break
+            
+        if not found_info:
+            print("\nNo records found.")
 
         # Ask if they want to search for another person's information
         while True:
@@ -37,6 +39,6 @@ def open_info():
                 return
             else:
                 print("Invalid input. Please enter 'Yes' or 'No' only.")
-    
+
 if __name__ == "__main__":
     open_info()
