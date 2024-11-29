@@ -38,7 +38,7 @@ def collect_info():
             file.write(f"Address: {loc_address}\n")
             file.write(f"Email: {personal_email}\n")
             file.write(f"Phone Number: {phone_number}\n")
-            file.write("-" * 40 + "\n")
+            file.write("-" * 40 + "\n") # Separator for different user information
             
         print("\nInformation saved successfully.")
 
@@ -55,6 +55,7 @@ def collect_info():
             else:
                 print("Invalid input. Please enter 'Yes' or 'No' only.")
 
+# Run the program
 if __name__ == "__main__":
     collect_info()
 
