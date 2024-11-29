@@ -15,7 +15,7 @@ def open_info():
 
         recorded_infos = data_info.split("-" * 40)
 
-        found_info = False
+        found_info = False 
 
         for record_info in recorded_infos:
             if f"Full Name:".lower() in record_info.lower() and search_name in record_info.lower(): 
@@ -39,5 +39,6 @@ def open_info():
             else:
                 print("Invalid input. Please enter 'Yes' or 'No' only.")
 
+# Run the program
 if __name__ == "__main__":
     open_info()
