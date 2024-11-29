@@ -24,6 +24,19 @@ def open_info():
                     break
         else:
             print("No records found.")
+
+        # Ask if they want to search for another person's information
+        while True:
+            another_info = input("\nDo you want to search for another person's information? (Yes/No): ").strip().lower()
+
+            # Set a condition for Yes/No answer
+            if another_info == "yes":
+                break
+            elif another_info == "no":
+                print("The program is closing.")
+                return
+            else:
+                print("Invalid input. Please enter 'Yes' or 'No' only.")
     
 if __name__ == "__main__":
     open_info()
