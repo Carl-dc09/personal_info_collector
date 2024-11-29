@@ -22,8 +22,7 @@ def open_info():
                 print("\n ---Information Found! ---")
                 print(record_info.strip())
                 found_info = True
-                break
-            
+
         if not found_info:
             print("\nNo records found.")
 
