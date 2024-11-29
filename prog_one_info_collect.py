@@ -28,12 +28,19 @@ def collect_info():
             
             except ValueError as error:
                 print(error, "Input invalid. Please input 11-digit numbers only.")
-                
-        # Ask for another user input
-        another = input("Do you want to input another person's information? (Yes/No): ")
 
-        if another != "Yes":
-            print("\nInformation Saved Successfully!")
+        # Ask for another user input
+        while True:
+            another_info = input("\nDo you want to input another person's information? (Yes/No): ").strip().lower()
+
+            if another_info == "yes":
+                continue
+            elif another_info == "no":
+                print("The program is closing.")
+                break
+            else:
+                print("Invalid input. Please enter 'Yes' or 'No' only.")
+        if another_info == "no":
             break
 
 if __name__ == "__main__":
