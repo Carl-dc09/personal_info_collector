@@ -38,6 +38,7 @@ def collect_info():
             file.write(f"Address: {loc_address}\n")
             file.write(f"Email: {personal_email}\n")
             file.write(f"Phone Number: {phone_number}\n")
+            file.write("-" * 40 + "\n")
             
         print("\nInformation saved successfully.")
 
@@ -47,15 +48,12 @@ def collect_info():
 
             # Set a condition for Yes/No answer
             if another_info == "yes":
-                continue
+                break
             elif another_info == "no":
                 print("The program is closing.")
-                break
+                return
             else:
                 print("Invalid input. Please enter 'Yes' or 'No' only.")
-        if another_info == "no":
-            break
-
 
 if __name__ == "__main__":
     collect_info()
