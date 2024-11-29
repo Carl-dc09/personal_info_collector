@@ -29,6 +29,16 @@ def collect_info():
             except ValueError as error:
                 print(error, "Input invalid. Please input 11-digit numbers only.")
 
+        # The informations will be saved and open in a file
+        with open("personal_info.txt", "a") as file:
+            file.write(f"Full Name: {full_name}\n")
+            file.write(f"Age: {user_age}\n")
+            file.write(f"Address: {loc_address}\n")
+            file.write(f"Email: {personal_email}\n")
+            file.write(f"Phone Number: {phone_number}\n")
+            
+        print("\nInformation saved successfully.")
+
         # Ask for another user input
         while True:
             another_info = input("\nDo you want to input another person's information? (Yes/No): ").strip().lower()
@@ -42,6 +52,7 @@ def collect_info():
                 print("Invalid input. Please enter 'Yes' or 'No' only.")
         if another_info == "no":
             break
+
 
 if __name__ == "__main__":
     collect_info()
