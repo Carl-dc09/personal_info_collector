@@ -11,7 +11,7 @@ def open_info():
     
     # Search for the information using the name
     while True:
-        search_name = input("Enter the full name: ").strip()
+        search_name = input("Enter the full name: ").strip().lower()
 
         recorded_infos = data_info.split("-" * 40)
 
