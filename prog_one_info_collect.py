@@ -11,8 +11,14 @@ def collect_info():
         personal_email = input("Email: ")
         phone_number = input("Phone Number: ")
 
+        another = input("Do you want to input another person's information? (Yes/No): ")
+
+        if another != "Yes":
+            break 
+
 if __name__ == "__main__":
     collect_info()
+
 
          
 
