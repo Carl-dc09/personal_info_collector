@@ -19,9 +19,14 @@ def open_info():
 
         for record_info in recorded_infos:
             if f"Full Name:".lower() in record_info.lower() and search_name in record_info.lower(): 
-                print("\n ---Information Found! ---")
-                print(record_info.strip())
-                found_info = True
+                start_index = record_info.lower().find("full name:") + len("full name:")
+                end_index = record_info.lower().find("\n", start_index)
+                full_name = record_info[start_index:end_index].strip().lower()
+
+                if search_name in full_name:
+                    print("\n ---Information Found! ---")
+                    print(record_info.strip())
+                    found_info = True
 
         if not found_info:
             print("\nNo records found.")
